@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a New Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: url('registration.jpg') center/cover no-repeat;
+            filter: blur(5px); /* Adjust the blur value as needed */
+        }
+
+        .container {
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 100px;
+            background-color: rgba(255, 255, 255, 0.8); /* Adjust the alpha value for transparency */
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .btn-link {
+            color: #007bff;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Create a New Account</h2>
+        <form action="register.php" method="post">
+            <label for="regFName">First Name:</label><br>
+            <input type="text" id="regFName" name="regFName" required><br>
+            <label for="regLName">Last Name:</label><br>
+            <input type="text" id="regLName" name="regLName" required><br>
+            <label for="regEmail">Email:</label><br>
+            <input type="email" id="regEmail" name="regEmail" required><br>
+            <label for="regPassword">Password:</label><br>
+            <input type="password" id="regPassword" name="regPassword" required><br>
+            <label for="regConfirmPassword">Confirm Password:</label><br>
+            <input type="password" id="regConfirmPassword" name="regConfirmPassword" required><br>
+            <br>
+            <input type="submit" value="Create">
+        </form>
+        <p>Already have an account? <a class="btn-link" href="002.html">Login</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spanish</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Navigation Panel Styles */
+        .nav-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 100;
+            font-size: 30px;
+            transition: 0.5s;
+        }
+
+        .nav-panel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+            z-index: 99;
+        }
+
+        .nav-content {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: left;
+            padding: 20px;
+            width: 70%;
+            height: 100%;
+            color: black;
+            font-size: 30px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 30px;
+        }
+
+        .hide-icon {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hamburger Icon -->
+    <div class="nav-icon" onclick="openNav()">
+        &#9776;
+    </div>
+
+    <!-- Navigation Panel -->
+    <div class="nav-panel" id="myNav">
+        <div class="close-btn" onclick="closeNav()">
+            &times;
+        </div>
+        <div class="nav-content">
+            <h1>Menu</h1>
+            <ul>
+                <li><a href="#" id="HomePageLink">Home</a></li><br>
+                <li><a href="#" id="ProfileLink">Profile</a></li><br>
+                <li><a href="#" id="signOutLink">Sign out</a></li>
+            </ul>
+        </div>
+    </div>
+<br><br>
+    <div>
+        <h1>Spanish</h1>
+        <br>
+<h2>i) How<br>i) Cómo</h2><audio controls> <source src="Como.mp3" type="audio/mp3"> </audio><br>
+<br>
+For example-<br> 
+How are you doing?, ¿Cómo estás?, <br> <audio controls> <source src="¿Cómo estás.mp3" type="audio/mp3"> </audio><br> 
+How is the weather today?, ¿Cómo está el clima hoy?,<br> <audio controls> <source src="¿Cómo está el clima hoy,.mp3" type="audio/mp3"> </audio><br>
+How can I access Wi-Fi or mobile data in this area?, Cómo puedo acceder a Wi-Fi o datos móviles en esta área?<br><audio controls> <source src="¿ Cómo puedo acceder a Wi-Fi o datos móviles en esta área.mp3" type="audio/mp3"> </audio><br>
+<br><br>
+<h2>ii) What<br>ii) Qué/Cuál</h2><audio controls> <source src="Quail.mp3" type="audio/mp3"> </audio><br>
+<br>
+For example-<br> 
+What are the must see attractions here?, ¿Cuál es son las atracciones imperdibles aquí?,<br> <audio controls> <source src="¿Cuál es son las atracciones imperdibles aquí.mp3" type="audio/mp3"> </audio><br>
+What's the local currency, and where can I exchange money?, ¿Cuál es la moneda local y dónde puedo cambiar dinero?<br> <audio controls> <source src="¿Cuál es la moneda local y dónde puedo cambiar dinero.mp3" type="audio/mp3"> </audio><br>
+<br>
+<br><br>
+<h2>iii) Where<br>iii) Dónde</h2><audio controls> <source src="Donde.mp3" type="audio/mp3"> </audio><br>
+<br>
+<br>
+For example-<br> 
+Where can I find a good restaurant or cafe nearby?, ¿Dónde puedo encontrar un buen restaurante o café cercano?,<br><audio controls> <source src="¿Dónde puedo encontrar un buen restaurante o café cercano.mp3" type="audio/mp3"> </audio><br>
+Where is the nearest (or best) hotel?, ¿Dónde está el hotel más cercano (o el mejor)?, <br> <audio controls> <source src="¿Dónde está el hotel más cercano (o el mejor).mp3" type="audio/mp3"> </audio><br>
+Where can I find public restrooms or bathrooms?, ¿Dónde están los baños públicos?,<br><audio controls> <source src="¿Dónde están los baños públicos.mp3" type="audio/mp3"> </audio><br> 
+Where is the nearest pharmacy/hospital?, ¿Dónde está la farmacia/hospital más cercano?<br> <audio controls> <source src="¿Dónde está la farmaciahospital más cercano.mp3" type="audio/mp3"> </audio><br>
+<br><br>
+<h2>iv) Are<br>iv) Están/Son</h2><audio controls> <source src="Estan Son.mp3" type="audio/mp3"> </audio><br>
+<br>
+For example-<br> 
+Are there any guided tours available?, ¿Hay tours guiados disponibles?,<br> <audio controls> <source src="¿Hay tours guiados disponibles.mp3" type="audio/mp3"> </audio><br>
+Are there any emergency numbers I should be aware of?, ¿Existen números de emergencia que deba conocer?<br><audio controls> <source src="¿Existen números de emergencia que deba conocer.mp3" type="audio/mp3"> </audio><br>
+<br><br>
+<h2>v) Is<br>v) Es</h2><audio controls> <source src="Es.mp3" type="audio/mp3"> </audio><br>
+<br>
+For example- <br>
+Is everything okay?, ¿Todo está bien?,<br> <audio controls> <source src="¿Todo está bien.mp3" type="audio/mp3"> </audio><br>
+Is he/she going to take us to our destination?, ¿Él/Ella nos llevará a nuestro destino?,<br> <audio controls> <source src="¿Él nos llevará a nuestro destino.mp3" type="audio/mp3"> </audio><br>
+Is it safe here at night?, ¿Es seguro aquí por la noche?<br><audio controls> <source src=", ¿Es seguro aquí por la noche.mp3" type="audio/mp3"> </audio><br>
+<br><br>
+<h2>vi) Can<br>vi) Puede/Puedes</h2><audio controls> <source src="Puedes.mp3" type="audio/mp3"> </audio><br>
+<br>
+For example- <br>
+Can we go to (the destination) at night? ¿Podemos ir a (el destino) por la noche?,<br> <audio controls> <source src="¿Podemos ir a (el destino) por la noche.mp3" type="audio/mp3"> </audio><br>
+Can we get medicines/food/accessories delivered here?, ¿Podemos recibir medicamentos/comida/accesorios entregados aquí?<br><audio controls> <source src="¿Podemos recibir medicamentos comida accesorios entregados aquí.mp3" type="audio/mp3"> </audio><br>
+<br><br>
+
+<h2>Words and some sentences used for greeting:<br>Palabras y algunas oraciones utilizadas para saludar:</h2>
+<br><br>
+<h2>Words:<br>Palabras:</h2>
+<br>
+i) Hello, Hola<br><audio controls> <source src="Hola.mp3" type="audio/mp3"> </audio><br>
+ii) Hi, Hola<br><audio controls> <source src="Hola.mp3" type="audio/mp3"> </audio><br>
+iii) Hey, Oye <br><audio controls> <source src="Oye.mp3" type="audio/mp3"> </audio><br>
+iv) Goodmorning, Buenos días<br><audio controls> <source src="Buenos días.mp3" type="audio/mp3"> </audio><br>
+v) Goodafternoon, Buenas tardes<br><audio controls> <source src="Buenas tardes.mp3" type="audio/mp3"> </audio><br>
+vi) Goodevening, Buenas noches<br><audio controls> <source src="Buenas noches.mp3" type="audio/mp3"> </audio><br>
+vii) Goodnight, Buenas noches<br><audio controls> <source src="Buenas noches.mp3" type="audio/mp3"> </audio><br>
+<br><br>
+<h2>Sentences:<br>Oraciones:</h2>
+<br>
+i) You are looking gorgeous/pretty/handsome/very nice/cut<br>i) Te ves hermosa/guapo/lindo/muy bien/cortés<br><audio controls> <source src="Te ves hermosa guapo lindo muy bien cortés.mp3" type="audio/mp3"> </audio><br><br>
+
+<h2>How to show appreciation:<br>Cómo mostrar aprecio:</h2>
+<br>
+i) Thank you so much!, ¡Muchas gracias! <br><audio controls> <source src="¡Muchas gracias!.mp3" type="audio/mp3"> </audio><br>
+ii) You are so kind, Eres muy amable<br><audio controls> <source src="Eres muy amable.mp3" type="audio/mp3"> </audio><br>
+iii) I appreciate you for (helping me/doing that for me), Te aprecio por (ayudarme/hacer eso por mí)<br><audio controls> <source src="Te aprecio por (ayudarme hacer eso por mí).mp3" type="audio/mp3"> </audio><br>
+iv) You are such a lovely person, Eres una persona encantadora <br><audio controls> <source src="Eres una persona encantadora.mp3" type="audio/mp3"> </audio><br>
+v) You have made me very happy, Me has hecho muy feliz<br><audio controls> <source src="Me has hecho muy feliz.mp3" type="audio/mp3"> </audio><br>
+vi) You have been a great help, Has sido de gran ayuda<br><audio controls> <source src="Has sido de gran ayuda.mp3" type="audio/mp3"> </audio><br>
+vii) Thank God you were there to help me, Gracias a Dios que estabas allí para ayudarme<br><audio controls> <source src="Gracias a Dios que estabas allí para ayudarme.mp3" type="audio/mp3"> </audio><br>
+
+<h2>How to show dissatisfaction:<br>Cómo mostrar insatisfacción:</h2>
+<br>
+i) That is/was not nice, Eso no fue agradable <br><audio controls> <source src="Eso fue decepcionante.mp3" type="audio/mp3"> </audio><br>
+ii) You/He/She/They are rude, Eres/Él/Ella/Ellos son groseros<br><audio controls> <source src="Eres Ella son groseros.mp3" type="audio/mp3"> </audio><br>
+iii) I did/do not like it, No me gustó<br><audio controls> <source src="No me gustó.mp3" type="audio/mp3"> </audio><br>
+iv) I don't want to go there, No quiero ir allí<br><audio controls> <source src="No quiero ir allí.mp3" type="audio/mp3"> </audio><br>
+v) That was dissapointing, Eso fue decepcionante<br><audio controls> <source src="Eso fue decepcionante.mp3" type="audio/mp3"> </audio><br>
+vi) I felt hurt, Me sentí herido<br><audio controls> <source src="Me sentí herido.mp3" type="audio/mp3"> </audio><br>
+vii) That was saddening, Eso fue triste<br><br><audio controls> <source src="Eso fue triste.mp3" type="audio/mp3"> </audio><br>
+
+<h2>How to say you don't feel good:<br>Cómo decir que no te sientes bien:</h2>
+<br>
+i) I do not feel good, No me siento bien<br><audio controls> <source src="No me siento bien.mp3" type="audio/mp3"> </audio><br>
+ii) My (particular part of the body) is aching, Me duele (parte específica del cuerpo)<br><audio controls> <source src="Me duele (parte específica del cuerpo).mp3" type="audio/mp3"> </audio><br>
+iii) I have an upset stomach, Tengo malestar estomacal<br><audio controls> <source src="Tengo malestar estomacal.mp3" type="audio/mp3"> </audio><br>
+iv) I feel suffocated, Me siento sofocado<br><audio controls> <source src="Me siento sofocado.mp3" type="audio/mp3"> </audio><br>
+v) I am having an allergy attack, Estoy teniendo una reacción alérgica<br><br><audio controls> <source src="Estoy teniendo una reacción alérgica.mp3" type="audio/mp3"> </audio><br>
+
+<h2>How to say you feel threatened:<br>Cómo decir que te sientes amenazado:</h2>
+<br>
+i) I am scared/afraid, Estoy asustado/asustada<br><audio controls> <source src="Estoy asustada.mp3" type="audio/mp3"> </audio><br>
+ii) I feel threatened, Me siento amenazado/amenazada<br><audio controls> <source src="Me siento amenazado.mp3" type="audio/mp3"> </audio><br>
+iii) Can we go somewhere safer?, ¿Podemos ir a algún lugar más seguro?<br><audio controls> <source src="¿Podemos ir a algún lugar más seguro.mp3" type="audio/mp3"> </audio><br><br><br>
+<h2>NOTE:"¿" IS USED IN SPANISH AT THE BEGINNING OF A QUESTION AND AT THE END OF A QUESTION, "?" IS USED.</h2>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "250px";
+            document.querySelector(".nav-icon").style.display = "none";
+            document.querySelector(".close-btn").style.display = "block";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0";
+            document.querySelector(".nav-icon").style.display = "block";
+            document.querySelector(".close-btn").style.display = "none";
+        }
+
+// Sign Out Link
+const signOutLink = document.getElementById("signOutLink");
+
+signOutLink.addEventListener("click", function () {
+    window.location.href = "002.html";
+});
+
+// Home Page Link
+const HomePageLink = document.getElementById("HomePageLink");
+
+HomePageLink.addEventListener("click", function () {
+    window.location.href = "index.html";
+});
+
+// Profile Link
+const ProfileLink = document.getElementById("ProfileLink");
+
+ProfileLink.addEventListener("click", function () {
+    window.location.href = "Profile.html";
+})
+
+// Initial welcome message update
+updateWelcomeMessage();
+    </script>
+</body>
+
+</html>

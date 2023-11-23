@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Langease - Main Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url('lang.jpg');
+            background-size: cover;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .dropdown {
+            margin-bottom: 10px;
+            width: 250px;
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        .btn-confirm {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 20px 100px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Navigation Panel Styles */
+        .nav-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 100;
+            font-size: 30px;
+            transition: 0.5s;
+        }
+
+        .nav-panel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+            z-index: 99;
+        }
+
+        .nav-content {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: left;
+            padding: 20px;
+            width: 40%;
+            height: 100%;
+            color: black;
+            font-size: 30px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 30px;
+        }
+
+        .hide-icon {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome</h1>
+        <p>Select a region and a language:</p>
+        <select class="dropdown" id="regionDropdown">
+            <option value="" selected disabled>Select Region</option>
+            <option value="america">Americas</option>
+            <option value="asia">Asia</option>
+        </select><br>
+        <select class="dropdown" id="languageDropdown" disabled>
+            <option value="" selected disabled>Select Language</option>
+            <option value="english">English</option>
+            <option value="spanish">Spanish</option>
+            <option value="hindi">Hindi</option>
+        </select>
+        <br><br>
+        <button class="btn-confirm" id="confirmButton" disabled>Confirm Selection</button>
+    </div>
+
+    <!-- Navigation Panel Script -->
+    <div class="nav-icon" id="navIcon">&#9776;</div>
+    <div class="nav-panel" id="navPanel">
+        <div class="nav-content">
+            <span class="close-btn" id="closeBtn">&times;</span>
+            <h2 id="welcomeMessage">Welcome, (My Name)</h2>
+            <ul>
+                <li><a href="#" id="HomePageLink">Home</a></li><br>
+                <li><a href="Profile.html" id="ProfileLink">Profile</a></li><br>
+                <li><a href="#" id="signOutLink">Sign out</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const regionDropdown = document.getElementById("regionDropdown");
+        const languageDropdown = document.getElementById("languageDropdown");
+        const confirmButton = document.getElementById("confirmButton");
+        const welcomeMessage = document.getElementById("welcomeMessage");
+
+        // Replace "My Name" with the user's name from the login page
+        const userName = "John Doe";
+
+        // Function to update the welcome message with the user's name
+        function updateWelcomeMessage() {
+            welcomeMessage.textContent = `Menu`;
+        }
+
+        regionDropdown.addEventListener("change", function () {
+            const selectedRegion = regionDropdown.value;
+            languageDropdown.disabled = false;
+            languageDropdown.options[0].disabled = true;
+
+            if (selectedRegion === "america") {
+                languageDropdown.options[3].disabled = true;
+            } else if (selectedRegion === "asia") {
+                languageDropdown.options[2].disabled = true;
+            }
+        });
+
+        languageDropdown.addEventListener("change", function () {
+            confirmButton.disabled = false;
+        });
+
+        confirmButton.addEventListener("click", function () {
+            const selectedRegion = regionDropdown.value;
+            const selectedLanguage = languageDropdown.value;
+
+            // Redirect to the specific language page
+            const languagePageUrl = `${selectedLanguage}.html`;
+            window.location.href = languagePageUrl;
+        });
+
+        // Navigation Panel Script
+        const navIcon = document.getElementById("navIcon");
+        const navPanel = document.getElementById("navPanel");
+        const closeBtn = document.getElementById("closeBtn");
+
+        let isNavPanelOpen = false;
+
+        function toggleNavPanel() {
+            if (isNavPanelOpen) {
+                navPanel.style.width = "0";
+                navIcon.classList.remove("hide-icon");
+                isNavPanelOpen = false;
+            } else {
+                navPanel.style.width = "40%";
+                navIcon.classList.add("hide-icon");
+                isNavPanelOpen = true;
+                updateWelcomeMessage();
+            }
+        }
+
+        navIcon.addEventListener("click", toggleNavPanel);
+        closeBtn.addEventListener("click", toggleNavPanel);
+
+        // Sign Out Link
+        const signOutLink = document.getElementById("signOutLink");
+
+        signOutLink.addEventListener("click", function () {
+            // Redirect to the login page (replace "login.html" with your actual login page URL)
+            window.location.href = "002.html";
+        });
+
+        // Home Page Link
+        const HomePageLink = document.getElementById("HomePageLink");
+
+        HomePageLink.addEventListener("click", function () {
+            window.location.href = "index.html";
+        });
+
+        // Profile Link
+        const ProfileLink = document.getElementById("ProfileLink");
+
+        ProfileLink.addEventListener("click", function () {
+            window.location.href = "Profile.html";
+        })
+
+        // Initial welcome message update
+        updateWelcomeMessage();
+    </script>
+</body>
+
+</html>
